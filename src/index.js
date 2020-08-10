@@ -4,12 +4,12 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import App from './App';
-import carreducer from './reducers/carreducer'
+import { initialState } from './reducers'
 
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
-const store = createStore(carreducer)
+const store = createStore(initialState)
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(<Provider store = {store}><App /></Provider>, rootElement);
