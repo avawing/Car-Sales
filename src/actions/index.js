@@ -13,10 +13,10 @@ export const removeFeature = (feature) => {
 
 export const ADD_FEATURE = 'ADD_FEATURE'
 
-export const addFeature = (feature) => {
-    console.log(feature)
+export const addFeature = (newFeature) => {
+    console.log(newFeature)
     return {
         type: ADD_FEATURE,
-        payload: feature
+        payload: newFeature
     }
 }
