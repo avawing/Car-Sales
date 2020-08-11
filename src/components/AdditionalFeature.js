@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux'
-
 import {addFeature} from '../actions/'
 
 const AdditionalFeature = props => {
@@ -9,7 +8,7 @@ const AdditionalFeature = props => {
       <button 
       onClick={(e) => {
           e.preventDefault();
-          addFeature(props.feature);
+          props.addFeature(props.feature);
         }} 
       className="button">Add</button>
       {props.feature.name} (+{props.feature.price})
@@ -17,4 +16,4 @@ const AdditionalFeature = props => {
   );
 };
 
-export default connect(null, {})(AdditionalFeature);
+export default connect(null, {addFeature})(AdditionalFeature);
